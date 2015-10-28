@@ -43,7 +43,7 @@
     <div ng-controller="thirdController">
         <h1 class="text-center">Challenge Three - Countries Data</h1>
         <div ng-repeat="country in countries | orderBy: 'name'">
-            <table class="table-striped">
+            <table class="table-condensed">
                 <thead>
                     <tr>
                         <th>Country Name</th>
@@ -58,7 +58,7 @@
                 </thead>
                 <tbody>
                     <td>{{country.name}}</td>
-                    <td></td>
+                    <td>{{country.code}}</td>
                 </tbody>
             </table>
         </div>
