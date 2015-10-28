@@ -1,4 +1,3 @@
-// Code goes here
 angular.module('myApp', []).controller('firstCtrl', function($scope) {
    var months = [
     {english: 'August',
