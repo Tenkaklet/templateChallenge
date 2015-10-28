@@ -41,7 +41,32 @@
         </div>
     </div>
     <div ng-controller="thirdController">
+<<<<<<< HEAD
       <h1 class="text-center">Challenge Three - Countries Data</h1>      
+=======
+        <h1 class="text-center">Challenge Three - Countries Data</h1>
+        <div ng-repeat="country in countries | orderBy: 'name'">
+            <table class="table-striped">
+                <thead>
+                    <tr>
+                        <th>Country Name</th>
+                        <th>1960 population</th>
+                        <th>1970 population</th>
+                        <th>1980 population</th>
+                        <th>1990 population</th>
+                        <th>2000 population</th>
+                        <th>2010 population</th>
+                        <th>Percentage growth between 1960 and 2010</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>{{country.name}}</td>
+                    <td></td>
+                </tbody>
+            </table>
+        </div>
+     </div>
+>>>>>>> master
     </div>
   </body>
 </html>

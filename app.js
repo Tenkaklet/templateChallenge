@@ -85,7 +85,12 @@ angular.module('myApp', []).controller('firstCtrl', function($scope) {
     $scope.numbers = range(1, 100, 1);
 }])
 .controller('thirdController', ['$scope', '$http', function($scope, $http){
+<<<<<<< HEAD
     $http.get('countries.json').then(function(data) {
         $scope.countries = data;
+=======
+    $http.get('countries.json').then(function(res) {
+        $scope.countries = res.data;
+>>>>>>> master
     });
 }]);
