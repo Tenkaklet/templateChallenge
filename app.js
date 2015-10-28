@@ -87,6 +87,6 @@ angular.module('myApp', []).controller('firstCtrl', function($scope) {
 .controller('thirdController', ['$scope', '$http', function($scope, $http){
     $http.get('countries.json').then(function(res) {
         $scope.countries = res.data;
-        console.log($scope.countries);
+        $scope.round = Math.round;
     });
 }]);
