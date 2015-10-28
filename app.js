@@ -83,4 +83,9 @@ angular.module('myApp', []).controller('firstCtrl', function($scope) {
 	  return a;
     }
     $scope.numbers = range(1, 100, 1);
+}])
+.controller('thirdController', ['$scope', '$http', function($scope, $http){
+    $http.get('countries.json').then(function(res) {
+        $scope.countries = res.data;
+    });
 }]);
