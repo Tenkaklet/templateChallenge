@@ -42,7 +42,7 @@
     </div>
     <div ng-controller="thirdController">
         <h1 class="text-center">Challenge Three - Countries Data</h1>
-        <div ng-repeat="country in countries | orderBy: 'name'" class="table">
+        <div class="table">
             <table class="table-condensed table-striped">
                 <thead>
                     <tr>
@@ -57,14 +57,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <td><strong>{{country.name}}</strong></td>
-                    <td>{{country["1960"] | number}}</td>
-                    <td>{{country["1970"] | number}}</td>
-                    <td>{{country["1980"] | number}}</td>
-                    <td>{{country["1990"] | number}}</td>
-                    <td>{{country["2000"] | number}}</td>
-                    <td>{{country["2010"] | number}}</td>
-                    <td>{{round((country["2010"] - country["1960"]) / country["2010"] * 100)}}%</td>
+                    <tr ng-repeat="country in countries | orderBy: 'name'">
+                        <td><strong>{{country.name}}</strong></td>
+                        <td>{{country["1960"] | number}}</td>
+                        <td>{{country["1970"] | number}}</td>
+                        <td>{{country["1980"] | number}}</td>
+                        <td>{{country["1990"] | number}}</td>
+                        <td>{{country["2000"] | number}}</td>
+                        <td>{{country["2010"] | number}}</td>
+                        <td>{{round((country["2010"] - country["1960"]) / country["2010"] * 100)}}%</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
