@@ -88,5 +88,5 @@ angular.module('myApp', []).controller('firstCtrl', function($scope) {
         $scope.countries = res.data;
         $scope.round = Math.round;
     });
-    $scope.name = "";
+    
 }]);
